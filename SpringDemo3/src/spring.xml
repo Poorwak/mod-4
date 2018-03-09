@@ -1,0 +1,30 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+     http://www.springframework.org/schema/context
+     http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+	
+	<bean id="emp" class="com.cg.springdemothree.dto.Employee">
+	<property name="empId" value="10001"></property>
+	<property name="empName" value="ABCD"></property>
+		
+	<property name="pro">
+	<list>
+	<ref bean="one"/>
+	<ref bean="two"/>
+	</list>
+	</property>
+	</bean>
+	
+	<bean id="one" class="com.cg.springdemothree.dto.Project">
+	<property name="projId" value="1008"></property>
+	<property name="projName" value="CloudServices"></property>
+	</bean>	 
+	
+	<bean id="two" class="com.cg.springdemothree.dto.Project">
+	<property name="projId" value="1009"></property>
+	<property name="projName" value="SalesForce"></property>
+	</bean>
+	 
+</beans>
